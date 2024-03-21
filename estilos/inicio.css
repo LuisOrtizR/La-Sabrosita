@@ -245,3 +245,76 @@ footer {
         max-width: 90%;
     }
 }
+
+/* Ajustes adicionales al CSS existente */
+
+/* Oculta el checkbox */
+.toggle-menu {
+    display: none;
+}
+
+/* Estilo del botón hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Estilo del menú desplegable */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 10px; /* Reduce el espacio entre los elementos del menú */
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff4500;
+}
+
+/* Media query para estilos responsivos */
+@media (max-width: 768px) {
+    /* Muestra el botón hamburguesa en pantallas pequeñas */
+    .hamburger {
+        display: block;
+    }
+
+    /* Oculta los enlaces del menú cuando el checkbox no está marcado */
+    .nav-links {
+        display: none;
+    }
+
+    /* Muestra los enlaces del menú cuando el checkbox está marcado */
+    .toggle-menu:checked + header .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        width: auto; /* Ajusta el ancho automáticamente */
+        z-index: 1000;
+    }
+
+    /* Estilos adicionales para los enlaces del menú desplegable */
+    .toggle-menu:checked + header .nav-links li {
+        margin: 5px 0; /* Reduce el espacio entre los elementos del menú */
+    }
+
+    .toggle-menu:checked + header .nav-links li a {
+        font-size: 16px; /* Reduce el tamaño de fuente */
+    }
+}
