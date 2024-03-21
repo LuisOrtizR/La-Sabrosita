@@ -245,7 +245,6 @@ footer {
         max-width: 90%;
     }
 }
-
 /* Ajustes adicionales al CSS existente */
 
 /* Oculta el checkbox */
@@ -278,10 +277,13 @@ footer {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 8px; /* Añade espacio alrededor del texto para que sea más fácil de hacer clic */
 }
 
 .nav-links li a:hover {
     color: #ff4500;
+    background-color: #fff; /* Cambia el fondo al pasar el cursor */
+    border-radius: 5px; /* Agrega bordes redondeados */
 }
 
 /* Media query para estilos responsivos */
@@ -316,5 +318,12 @@ footer {
 
     .toggle-menu:checked + header .nav-links li a {
         font-size: 16px; /* Reduce el tamaño de fuente */
+        padding: 8px;
     }
+}
+/* Añadir estilo para la clase .promo */    
+.promo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #48ff00; /* Color naranja */
 }

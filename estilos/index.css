@@ -10,6 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 main {
@@ -19,7 +21,7 @@ main {
     align-items: center;
 }
 
-.login-container {
+.container {
     max-width: 400px;
     width: 90%;
     background-color: #fff;
@@ -45,11 +47,19 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #ff4500;
 }
 
 button[type="submit"] {
@@ -58,7 +68,7 @@ button[type="submit"] {
     background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -75,7 +85,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .login-container {
+    .container {
         max-width: 90%;
     }
 }
